@@ -1,73 +1,105 @@
-# React + TypeScript + Vite
+$ AQVEX — Каталог товарів
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+$ Вимоги
 
-Currently, two official plugins are available:
+- [Bun](https://bun.sh/) v1.0 або вище
+- Node.js v18 або вище
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+$$ Встановлення
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+1. Клонуйте репозиторій:
+```bash
+   git clone https://github.com/paranoiabn/test.git
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+2. Перейдіть до директорії проєкту:
+```bash
+   cd test
 ```
+
+3. Встановіть залежності:
+```bash
+   bun install
+```
+
+$$ Запуск
+
+Запустіть сервер розробки:
+```bash
+bun run dev
+```
+
+Додаток буде доступний за адресою: [http://localhost:5173](http://localhost:5173)
+
+$$ Збірка для продакшену
+```bash
+bun run build
+```
+
+$$ Стек технологій
+
+- **TypeScript** — статична типізація
+- **React 18** — UI бібліотека
+- **Vite** — збірник та dev-сервер
+- **Bun** — пакетний менеджер
+
+$$ Функціонал
+
+- Відображення каталогу товарів
+- Пошук за назвою товару в реальному часі
+- Сортування за ціною та рейтингом
+- Пагінація
+- Вибір об'єму товару
+
+$ AQVEX — Product Catalog
+
+$$ Requirements
+
+- [Bun](https://bun.sh/) v1.0 or higher
+- Node.js v18 or higher
+
+$$ Installation
+
+1. Clone the repository:
+```bash
+   git clone https://github.com/paranoiabn/test.git
+```
+
+2. Navigate to the project directory:
+```bash
+   cd test
+```
+
+3. Install dependencies:
+```bash
+   bun install
+```
+
+$$ Running the App
+
+Start the development server:
+```bash
+bun run dev
+```
+
+The app will be available at: [http://localhost:5173](http://localhost:5173)
+
+$$ Production Build
+```bash
+bun run build
+```
+
+$$ Tech Stack
+
+- **TypeScript** — static typing
+- **React 18** — UI library
+- **Vite** — bundler and dev server
+- **Bun** — package manager
+
+$$ Features
+
+- Product catalog display
+- Real-time search by product name
+- Sorting by price and rating
+- Pagination
+- Product volume selection
